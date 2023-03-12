@@ -1,0 +1,15 @@
+# Spacefile Docs: https://go.deta.dev/docs/spacefile/v0
+v: 0
+micros:
+  - name: child-dev-api
+    src: .
+    engine: python3.9
+    primary: true
+    public_routes:
+      - "/*"
+    presets:
+      api_keys: true
+      env:
+        - name: MY_COLLECTION_KEY
+          description: Integrate my new Space App with my new Collection. Yes!!
+          default: "INSERT_MY_COLLECTION_KEY"
